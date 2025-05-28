@@ -31,6 +31,7 @@ public class EventoSismoService {
         this.alcanceSismoRepository = alcanceSismoRepository;
         this.magnitudRitcherRepository = magnitudRitcherRepository;
         this.origenGeneracionRepository = origenGeneracionRepository;
+
     }
 
     // Listar todos los eventos sísmicos
@@ -77,6 +78,10 @@ public class EventoSismoService {
                 .orElseThrow(() -> new RuntimeException("Origen de generación no encontrado"));
         eventoSismo.setOrigenGeneracion(origen);
 
+
+        // Validaciones adicionales
+
+
         // Guardar en base de datos
         EventoSismo guardado = eventoSismoRepository.save(eventoSismo);
 
@@ -88,6 +93,29 @@ public class EventoSismoService {
                 guardado.getLatitudHipocentro(),
                 guardado.getLongitudHipocentro(),
                 guardado.getValorMagnitud()
+        );
+    }
+    // Eliminar un evento sísmico por ID
+    public void eliminarEventoSismo(Long id) {
+        if (!eventoSismoRepository.existsById(id)) {
+            throw new RuntimeException("Evento sísmico no encontrado");
+        }
+        eventoSismoRepository.deleteById(id);
+    }
+
+
+    // Obtener un evento sísmico por ID
+    public EventoSismoResponseDTO obtenerEventoSismoPorId(Long id) {
+        EventoSismo eventoSismo = eventoSismoRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Evento sísmico no encontrado"));
+
+        return new EventoSismoResponseDTO(
+                eventoSismo.getFechaHoraOcurrencia(),
+                eventoSismo.getLatitudEpicentro(),
+                eventoSismo.getLongitudEpicentro(),
+                eventoSismo.getLatitudHipocentro(),
+                eventoSismo.getLongitudHipocentro(),
+                eventoSismo.getValorMagnitud()
         );
     }
 }

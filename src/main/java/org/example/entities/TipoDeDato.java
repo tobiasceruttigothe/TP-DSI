@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "tipodedato")
+@Table(name = "tipo_de_dato")
 @Data
 
 public class TipoDeDato {
@@ -20,13 +20,13 @@ public class TipoDeDato {
     @Column(name = "denominacion")
     private String denominacion;
 
-    @Column(name = "nombreunidadmedida")
+    @Column(name = "nombre_unidad_medida")
     private String nombreUnidadMedida;
 
-    @Column(name = "valorumbral")
+    @Column(name = "valor_umbral")
     private double valorUmbral;
 
     @OneToOne
-    @JoinColumn(name = "detallemuestrasismica")
+    @JoinColumn(name = "detalle_muestra_sismica")
     private DetalleMuestraSismica detalleMuestraSismica;
 }

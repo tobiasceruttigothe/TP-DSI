@@ -7,7 +7,7 @@ import lombok.*;
 import java.util.List;
 
 @Entity
-@Table(name = "magnitudritcher")
+@Table(name = "magnitud_ritcher")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -18,13 +18,14 @@ public class MagnitudRitcher {
     @Column(name = "id")
     private long id;
 
-    @Column(name = "descripcionMagnitud")
+    @Column(name = "descripcion_magnitud")
     private String descripcionMagnitud;
 
     @Column(name = "numero")
     private double numero;
 
     @OneToMany(mappedBy = "magnitudRitcher")
+    @Column(name = "evento_sismo")
     private List<EventoSismo> eventoSismo;
 
 }

@@ -4,6 +4,7 @@ package org.example.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -16,6 +17,9 @@ public class EstacionSismologica {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_estacion_sismologica")
+    private Long idEstacionSismologica;
+
     @Column(name = "id_codigo_estacion")
     private Long idCodigoEstacion;
 
@@ -23,7 +27,7 @@ public class EstacionSismologica {
     private String documentoCertificado;
 
     @Column(name = "fecha_solicitud_certificado")
-    private Date fechaSolicitudCertificado;
+    private LocalDate fechaSolicitudCertificado;
 
     @Column(name = "longitud")
     private double longitud;

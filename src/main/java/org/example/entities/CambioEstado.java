@@ -1,13 +1,11 @@
 package org.example.entities;
 
-
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "cambioestado")
+@Table(name = "cambio_estado")
 @Data
 public class CambioEstado {
 
@@ -16,13 +14,17 @@ public class CambioEstado {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "fechahorainicio")
+    @Column(name = "fecha_hora_inicio")
     private LocalDateTime fechaHoraInicio;
 
-    @Column(name = "fechahorafin")
+    @Column(name = "fecha_hora_fin")
     private LocalDateTime fechaHoraFin;
 
     @ManyToOne
-    @JoinColumn(name = "estado", nullable = false)
+    @JoinColumn(name = "evento_sismo", nullable = false)
+    private EventoSismo eventoSismo;
+
+    @ManyToOne
+    @JoinColumn(name = "estado_id", referencedColumnName = "id")
     private Estado estado;
 }

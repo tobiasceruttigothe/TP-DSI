@@ -4,6 +4,7 @@ package org.example.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -20,12 +21,13 @@ public class Sismografo {
     private Long id;
 
     @Column(name = "fecha_adquisicion")
-    private Date fechaAdquisicion;
+    private LocalDate fechaAdquisicion;
 
     @Column(name = "nro_serie")
     private String nroSerie;
 
     @OneToMany(mappedBy = "sismografo")
+    @Column(name = "serie_temporal")
     private List<SerieTemporal> serieTemporal;
 
     @OneToOne

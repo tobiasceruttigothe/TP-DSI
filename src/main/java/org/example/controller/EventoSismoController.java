@@ -30,6 +30,18 @@ public class EventoSismoController {
         EventoSismoResponseDTO nuevoEvento = eventoSismoService.crearEventoSismo(eventoSismoDTO);
         return ResponseEntity.status(HttpStatus.CREATED).body(nuevoEvento);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eliminarEventoSismo(@PathVariable Long id) {
+        eventoSismoService.eliminarEventoSismo(id);
+        return ResponseEntity.noContent().build();
+    }
+    // Aquí podrías agregar más métodos para buscar por ID, actualizar, etc.
+    @GetMapping("/{id}")
+    public ResponseEntity<EventoSismoResponseDTO> obtenerEventoSismoPorId(@PathVariable Long id) {
+        EventoSismoResponseDTO evento = eventoSismoService.obtenerEventoSismoPorId(id);
+        return evento != null ? ResponseEntity.ok(evento) : ResponseEntity.notFound().build();
+    }
 }
 
 /*

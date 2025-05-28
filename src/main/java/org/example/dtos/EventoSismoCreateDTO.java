@@ -22,5 +22,6 @@ public class EventoSismoCreateDTO {
     private Long magnitudRitcherId;
     private Long origenGeneracionId;
 
+
     // Getters y setters (o podés usar Lombok @Data si preferís)
 }

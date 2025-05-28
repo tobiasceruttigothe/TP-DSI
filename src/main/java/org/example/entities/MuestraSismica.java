@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Table(name = "muestrasismica")
+@Table(name = "muestra_sismica")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

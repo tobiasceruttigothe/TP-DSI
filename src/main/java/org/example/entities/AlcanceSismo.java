@@ -7,7 +7,7 @@ import lombok.*;
 import java.util.List;
 
 @Entity
-@Table(name = "alcancesismo")
+@Table(name = "alcance_sismo")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -24,8 +24,8 @@ public class AlcanceSismo {
     @Column(name = "descripcion")
     private String descripcion;
 
-    @OneToMany
-    @JoinColumn(name = "eventosismo")
-    private List<EventoSismo>  eventoSismo;
+    @OneToMany(mappedBy = "alcanceSismo", cascade = CascadeType.ALL)
+    @Column(name = "evento_sismo")
+    private List<EventoSismo> eventoSismo;
 
 }

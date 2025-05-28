@@ -2,13 +2,17 @@ package org.example.entities;
 
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
 @Table(name = "estado")
 @Data
+//@AllArgsConstructor
+
 public class Estado {
 
     @Id
@@ -23,5 +27,5 @@ public class Estado {
     private String ambito;
 
     @OneToMany(mappedBy = "estado")
-    private List<CambioEstado> cambiosEstado;
+    private List<CambioEstado> cambioEstado;
 }

@@ -39,7 +39,8 @@ public class SerieTemporal {
     @JoinColumn(name = "id_sismografo")
     private Sismografo sismografo;
 
-    @OneToMany(mappedBy = "serieTemporal")
+    @OneToMany(mappedBy = "serieTemporal", cascade = CascadeType.ALL)
+    //@Column(name = "muestra_sismica")
     private List<MuestraSismica> muestraSismica;
 
 }

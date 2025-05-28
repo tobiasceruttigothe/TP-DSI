@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Entity
-@Table(name = "evento_sismo")
+@Table(name = "clasificacion_sismo")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -20,14 +20,15 @@ public class ClasificacionSismo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "kmprofundidadhasta")
+    @Column(name = "km_profundidad_hasta")
     private double kmProfundidadHasta;
 
-    @Column(name = "kmprofundidaddesde")
+    @Column(name = "km_profundidad_desde")
     private double kmProfundidadDesde;
 
-    @OneToMany(mappedBy = "clasificacionSismo")
-    private List<EventoSismo> eventoSismo;
+    @OneToOne(mappedBy = "clasificacionSismo")
+    @JoinColumn(name = "id_evento_sismo", referencedColumnName = "id")
+    private EventoSismo idEventoSismo;
 
 
 }

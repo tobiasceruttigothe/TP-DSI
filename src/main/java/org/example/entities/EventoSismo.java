@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -19,29 +20,29 @@ public class EventoSismo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "fechahorafin")
+    @Column(name = "fecha_hora_fin")
     private LocalDateTime fechaHora;
 
-    @Column(name = "fechahoraocurrencia")
+    @Column(name = "fecha_hora_ocurrencia")
     private LocalDateTime fechaHoraOcurrencia;
 
-    @Column(name = "latitudepicentro")
+    @Column(name = "latitud_epicentro")
     private Double latitudEpicentro;
 
-    @Column(name = "longitudepicentro")
+    @Column(name = "longitud_epicentro")
     private Double longitudEpicentro;
 
-    @Column(name = "latitudhipocentro")
+    @Column(name = "latitud_hipocentro")
     private Double latitudHipocentro;
 
-    @Column(name = "longitudhipocentro")
+    @Column(name = "longitud_hipocentro")
     private Double longitudHipocentro;
 
-    @Column(name = "valorMagnitud")
+    @Column(name = "valor_magnitud")
     private Double valorMagnitud;
 
-    @ManyToOne
-    @JoinColumn(name = "id_clasificacionsismo")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_clasificacion_sismo", referencedColumnName = "id")
     private ClasificacionSismo clasificacionSismo;
 
     @ManyToOne
@@ -56,7 +57,12 @@ public class EventoSismo {
     @JoinColumn(name = "id_origen_generacion")
     private OrigenGeneracion origenGeneracion;
 
-    @OneToMany(mappedBy = "eventoSismo")
-    private List<SerieTemporal> seriesTemporales;
+    @OneToMany(mappedBy = "eventoSismo", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Column(name = "series_temporales")
+    private List<SerieTemporal> seriesTemporales = new ArrayList<>();
+
+    @OneToMany(mappedBy = "eventoSismo", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Column(name = "cambios_estado")
+    private List<CambioEstado> cambiosEstado = new ArrayList<>();
 
 }

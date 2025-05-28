@@ -7,7 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "detallemuestrasismica")
+@Table(name = "detalle_muestra_sismica")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,10 +23,10 @@ public class DetalleMuestraSismica {
     private double valor;
 
     @ManyToOne
-    @JoinColumn(name = "muestrasismica")
+    @JoinColumn(name = "muestra_sismica")
     private MuestraSismica muestraSismica;
 
     @OneToOne
-    @JoinColumn(name = "tipodedato")
+    @JoinColumn(name = "tipo_de_dato")
     private TipoDeDato tipoDeDato;
 }
