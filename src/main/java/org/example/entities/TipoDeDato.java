@@ -4,6 +4,8 @@ package org.example.entities;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Entity
 @Table(name = "tipo_de_dato")
 @Data
@@ -26,7 +28,7 @@ public class TipoDeDato {
     @Column(name = "valor_umbral")
     private double valorUmbral;
 
-    @OneToOne
-    @JoinColumn(name = "detalle_muestra_sismica")
-    private DetalleMuestraSismica detalleMuestraSismica;
+    @OneToMany(mappedBy = "tipoDeDato", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Column(name = "detalle_muestra_sismica")
+    private List<DetalleMuestraSismica> detalleMuestraSismica;
 }

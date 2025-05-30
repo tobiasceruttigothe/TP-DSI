@@ -28,4 +28,8 @@ public class MagnitudRitcher {
     @Column(name = "evento_sismo")
     private List<EventoSismo> eventoSismo;
 
+    public boolean esAutodetectado() {
+        return this.numero < 4.0;
+    }
+
 }

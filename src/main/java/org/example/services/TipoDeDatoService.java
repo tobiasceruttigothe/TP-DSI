@@ -17,42 +17,4 @@ public class TipoDeDatoService {
         this.tipoDeDatoRepository = tipoDeDatoRepository;
     }
 
-    public TipoDeDatoDTO createTipoDeDato(TipoDeDatoDTO tipoDeDatoDTO) {
-        TipoDeDato tipoDeDato = new TipoDeDato();
-        tipoDeDato.setDenominacion(tipoDeDatoDTO.getDenominacion());
-        tipoDeDato.setNombreUnidadMedida(tipoDeDatoDTO.getNombreUnidadMedida());
-        tipoDeDato.setValorUmbral(tipoDeDatoDTO.getValorUmbral());
-        TipoDeDato savedTipoDeDato = tipoDeDatoRepository.save(tipoDeDato);
-        return new TipoDeDatoDTO(
-                savedTipoDeDato.getDenominacion(),
-                savedTipoDeDato.getNombreUnidadMedida(),
-                savedTipoDeDato.getValorUmbral()
-        );
-    }
-
-    public TipoDeDatoDTO getTipoDeDatoById(Long id) {
-        TipoDeDato tipoDeDato = tipoDeDatoRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Tipo de dato no encontrado"));
-        return new TipoDeDatoDTO(
-                tipoDeDato.getDenominacion(),
-                tipoDeDato.getNombreUnidadMedida(),
-                tipoDeDato.getValorUmbral()
-        );
-    }
-
-    public void deleteTipoDeDato(Long id) {
-        if (!tipoDeDatoRepository.existsById(id)) {
-            throw new RuntimeException("Tipo de dato no encontrado");
-        }
-        tipoDeDatoRepository.deleteById(id);
-    }
-
-    public List<TipoDeDatoDTO> listTiposDeDato() {
-        return tipoDeDatoRepository.findAll().stream()
-                .map(t -> new TipoDeDatoDTO(
-                        t.getDenominacion(),
-                        t.getNombreUnidadMedida(),
-                        t.getValorUmbral()
-                )).toList();
-    }
 }

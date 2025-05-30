@@ -5,51 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdbc6e90-fedc-465a-9f3e-8b02ba225d7b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/AlcanceSismoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/ClasificacionSismoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/EstacionSismologicaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/EstadoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/MagnitudRitcherController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/OrigenGeneracionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TipoDeDatoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dtos/AlcanceSismoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dtos/CambioEstadoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dtos/ClasificacionSismoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dtos/EstacionSismologicaDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dtos/EstadoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dtos/MagnitudRitcherDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dtos/OrigenGeneracionDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dtos/TipoDeDatoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/AlcanceSismoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/ClasificacionSismoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/EstacionSismologicaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/EstadoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/MagnitudRitcherService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/OrigenGeneracionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/TipoDeDatoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/basededatos.mv.db" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/CambioEstadoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/basededatos.db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/basededatos.db.mv.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/AlcanceSismoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/ClasificacionSismoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/EstacionSismologicaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/EstadoController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/EventoSismoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/EventoSismoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dtos/EventoSismoCreateDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dtos/EventoSismoCreateDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/AlcanceSismo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/AlcanceSismo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/MagnitudRitcherController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/OrigenGeneracionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/TipoDeDatoController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/CambioEstado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/CambioEstado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/ClasificacionSismo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/ClasificacionSismo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/DetalleMuestraSismica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/DetalleMuestraSismica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/EstacionSismologica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/EstacionSismologica.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/Estado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/Estado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/EventoSismo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/EventoSismo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/MagnitudRitcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/MagnitudRitcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/MuestraSismica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/MuestraSismica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/OrigenGeneracion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/OrigenGeneracion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/SerieTemporal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/SerieTemporal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/Sismografo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/Sismografo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/TipoDeDato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/TipoDeDato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/EstadoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/EstadoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/MagnitudRitcherRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/MagnitudRitcherRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/CambioEstadoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/CambioEstadoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/EventoSismoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/EventoSismoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/AlcanceSismoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/AlcanceSismoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/ClasificacionSismoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/ClasificacionSismoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/EstacionSismologicaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/EstacionSismologicaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/EstadoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/EstadoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/EventoSismoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/EventoSismoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/MagnitudRitcherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/MagnitudRitcherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/OrigenGeneracionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/OrigenGeneracionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/TipoDeDatoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/TipoDeDatoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,37 +67,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.TP-DSI [compile].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.SpringbootBackendApplication.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/tobia/OneDrive/Escritorio/TP-DSI-FINAL",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/tobia/OneDrive/Escritorio/TP-DSI-FINAL/src/main/java/org/example/Main.java",
-    "settings.editor.selected.configurable": "com.github.copilot.settings.ApplicationConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven. [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TP-DSI [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TP-DSI [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TP-DSI [install].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.SpringbootBackendApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/tobia/IntelliJ/TP-DSI-FINAL&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/tobia/OneDrive/Escritorio/TP-DSI-FINAL/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn install" />
+      <command value="mvn clean install" />
       <command value="mvn compile" />
     </option>
   </component>
   <component name="RunManager">
     <configuration name="SpringbootBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="TP-DSI-FINAL" />
+      <module name="TP-DSI" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.SpringbootBackendApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -142,7 +142,23 @@
       <workItem from="1748390064588" duration="177000" />
       <workItem from="1748407255487" duration="9312000" />
       <workItem from="1748457465335" duration="4011000" />
-      <workItem from="1748470035712" duration="387000" />
+      <workItem from="1748470035712" duration="881000" />
+      <workItem from="1748470928148" duration="466000" />
+      <workItem from="1748471819160" duration="193000" />
+      <workItem from="1748472032763" duration="1184000" />
+      <workItem from="1748473235252" duration="608000" />
+      <workItem from="1748473865169" duration="67000" />
+      <workItem from="1748476018951" duration="981000" />
+      <workItem from="1748477026729" duration="24000" />
+      <workItem from="1748477062048" duration="28000" />
+      <workItem from="1748477095407" duration="32000" />
+      <workItem from="1748477134192" duration="90000" />
+      <workItem from="1748477251588" duration="60000" />
+      <workItem from="1748477334271" duration="30000" />
+      <workItem from="1748477439048" duration="3945000" />
+      <workItem from="1748484976499" duration="4503000" />
+      <workItem from="1748548847350" duration="8445000" />
+      <workItem from="1748558073982" duration="187000" />
     </task>
     <servers />
   </component>

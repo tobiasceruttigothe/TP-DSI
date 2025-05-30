@@ -41,7 +41,7 @@ public class EventoSismo {
     @Column(name = "valor_magnitud")
     private Double valorMagnitud;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_clasificacion_sismo", referencedColumnName = "id")
     private ClasificacionSismo clasificacionSismo;
 
@@ -64,5 +64,18 @@ public class EventoSismo {
     @OneToMany(mappedBy = "eventoSismo", cascade = CascadeType.ALL, orphanRemoval = true)
     @Column(name = "cambios_estado")
     private List<CambioEstado> cambiosEstado = new ArrayList<>();
+
+    public boolean esNoRevisado() {
+        for (CambioEstado cambio : cambiosEstado) {
+            if (cambio.esEstadoActual() && cambio.esNoRevisado()) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public List<EventoSismo> ordenarPorFechaYHoraOcurrencia(List<EventoSismo> eventos) {
+        eventos.sort((e1, e2) -> e1.getFechaHoraOcurrencia().compareTo(e2.getFechaHoraOcurrencia()));
+        return eventos;
+    }
 
 }

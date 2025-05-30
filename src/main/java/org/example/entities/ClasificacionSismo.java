@@ -26,9 +26,8 @@ public class ClasificacionSismo {
     @Column(name = "km_profundidad_desde")
     private double kmProfundidadDesde;
 
-    @OneToOne(mappedBy = "clasificacionSismo")
-    @JoinColumn(name = "id_evento_sismo", referencedColumnName = "id")
-    private EventoSismo idEventoSismo;
-
+    @OneToMany(mappedBy = "clasificacionSismo", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Column(name = "id_evento_sismo")
+    private List<EventoSismo> idEventoSismo;
 
 }

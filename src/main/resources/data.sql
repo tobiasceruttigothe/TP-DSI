@@ -112,6 +112,8 @@ VALUES (10, '2023-10-02', 'SN-1010-J', 10);
 
 
 
+
+
 -- Tabla: tipo_de_dato (10 registros)
 INSERT INTO tipo_de_dato (id, denominacion, nombre_unidad_medida, valor_umbral) VALUES
                                                                                     (1, 'Aceleración', 'm/s²', 9.8),
@@ -124,6 +126,43 @@ INSERT INTO tipo_de_dato (id, denominacion, nombre_unidad_medida, valor_umbral) 
                                                                                     (8, 'Tiempo de Llegada', 's', 10),
                                                                                     (9, 'Duración del Evento', 's', 120),
                                                                                     (10, 'Magnitud Local', 'ML', 4.5);
+
+
+-- Estados posibles
+INSERT INTO estado (id, nombre, ambito) VALUES
+                                            (1, 'no revisado', 'EventoSismico'),
+                                            (2, 'en revision', 'EventoSismico'),
+                                            (3, 'rechazado', 'EventoSismico');
+
+
+
+INSERT INTO evento_sismo (
+    id, fecha_hora_ocurrencia, fecha_hora_fin, latitud_epicentro, longitud_epicentro,
+    latitud_hipocentro, longitud_hipocentro, valor_magnitud,
+    id_clasificacion_sismo, id_alcance_sismo, id_magnitud_ritcher, id_origen_generacion
+) VALUES
+      (1, '2025-05-01T10:15:00', NULL, -31.4, -64.2, -31.5, -64.3, 3.5, 1, 1, 1, 1),
+      (2, '2025-05-03T14:45:00', NULL, -32.9, -68.8, -33.0, -68.9, 5.2, 1, 1, 2, 1);
+
+
+
+
+-- CAMBIOS DE ESTADO
+
+-- Evento 1: 1 cambio de estado actual
+INSERT INTO cambio_estado (
+    id, fecha_hora_inicio, fecha_hora_fin, evento_sismo, estado_id
+) VALUES
+    (1, '2025-05-01T10:16:00', NULL, 1, 1);
+
+-- Evento 2: 2 cambios de estado
+INSERT INTO cambio_estado (
+    id, fecha_hora_inicio, fecha_hora_fin, evento_sismo, estado_id
+) VALUES
+      (2, '2025-05-03T14:46:00', '2025-05-03T15:30:00', 2, 1),
+      (3, '2025-05-03T15:30:00', NULL, 2, 2);
+
+
 
 -- Tabla: serie_temporal (12 registros)
 INSERT INTO serie_temporal (id, condicion_alarma, fecha_hora_registro, fecha_hora_inicio_muestras, frecuencia_muestras, id_evento_sismo, id_sismografo) VALUES
@@ -269,3 +308,8 @@ INSERT INTO detalle_muestra_sismica (id, valor, muestra_sismica, tipo_de_dato) V
                                                                                    (95, 69.17, 27, 9),
                                                                                    (96, 8.08, 27, 8),
                                                                                    (97, 74.6, 27, 4);
+
+
+
+
+

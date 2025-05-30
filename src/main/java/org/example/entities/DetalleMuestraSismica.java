@@ -26,7 +26,7 @@ public class DetalleMuestraSismica {
     @JoinColumn(name = "muestra_sismica")
     private MuestraSismica muestraSismica;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "tipo_de_dato")
     private TipoDeDato tipoDeDato;
 }

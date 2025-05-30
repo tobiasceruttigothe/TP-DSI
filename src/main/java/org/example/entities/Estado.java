@@ -2,9 +2,7 @@ package org.example.entities;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.List;
 
@@ -28,4 +26,13 @@ public class Estado {
 
     @OneToMany(mappedBy = "estado")
     private List<CambioEstado> cambioEstado;
+
+    public boolean esNoRevisado() {
+        return "no revisado".equalsIgnoreCase(nombre);
+
+    }
+
+    public boolean esAmbitoEventoSismico() {
+        return "EventoSismico".equalsIgnoreCase(ambito);
+    }
 }

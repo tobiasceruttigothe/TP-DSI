@@ -1,6 +1,7 @@
 package org.example.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import java.time.LocalDateTime;
 
@@ -27,4 +28,12 @@ public class CambioEstado {
     @ManyToOne
     @JoinColumn(name = "estado_id", referencedColumnName = "id")
     private Estado estado;
+
+
+    public boolean esEstadoActual() {
+        return fechaHoraFin == null;
+    }
+    public boolean esNoRevisado() {
+        return estado.esAmbitoEventoSismico() && estado.esNoRevisado();
+    }
 }

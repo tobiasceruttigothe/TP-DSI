@@ -20,44 +20,9 @@ public class EventoSismoController {
     }
 
     @GetMapping
-    public ResponseEntity<List<EventoSismoResponseDTO>> listarEventosSismos() {
-        List<EventoSismoResponseDTO> eventos = eventoSismoService.listarEventosSismos();
+    public ResponseEntity<List<EventoSismoResponseDTO>> listarEventosSismosAutodetectados() {
+        List<EventoSismoResponseDTO> eventos = eventoSismoService.buscarEventosAutodetectados();
         return ResponseEntity.ok(eventos);
     }
-
-    @PostMapping
-    public ResponseEntity<EventoSismoResponseDTO> crearEventoSismo(@RequestBody EventoSismoCreateDTO eventoSismoDTO) {
-        EventoSismoResponseDTO nuevoEvento = eventoSismoService.crearEventoSismo(eventoSismoDTO);
-        return ResponseEntity.status(HttpStatus.CREATED).body(nuevoEvento);
-    }
-
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> eliminarEventoSismo(@PathVariable Long id) {
-        eventoSismoService.eliminarEventoSismo(id);
-        return ResponseEntity.noContent().build();
-    }
-    // Aquí podrías agregar más métodos para buscar por ID, actualizar, etc.
-    @GetMapping("/{id}")
-    public ResponseEntity<EventoSismoResponseDTO> obtenerEventoSismoPorId(@PathVariable Long id) {
-        EventoSismoResponseDTO evento = eventoSismoService.obtenerEventoSismoPorId(id);
-        return evento != null ? ResponseEntity.ok(evento) : ResponseEntity.notFound().build();
-    }
 }
-
-/*
-    @PostMapping
-    public ResponseEntity<UsuarioRespuestaDTO> crearUsuario(@Valid @RequestBody UsuarioCrearDTO usuarioCrearDTO) {
-        UsuarioRespuestaDTO creado = usuarioService.crearUsuario(usuarioCrearDTO);
-        return new ResponseEntity<>(creado, HttpStatus.CREATED);
-    }
-
-
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> eliminarUsuario(@PathVariable Long id) {
-        usuarioService.eliminarUsuario(id);
-        return ResponseEntity.noContent().build();
-    }
-
-    // Para buscar por id: (podés crear un DTO similar para la respuesta)
-*/
 
